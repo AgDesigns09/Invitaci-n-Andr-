@@ -46,7 +46,6 @@
             position: relative;
         }
 
-        /* --- CONTENEDOR DE FOTO Y GLOBO --- */
         .header-photo {
             position: relative;
             display: inline-block;
@@ -61,7 +60,6 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
 
-        /* DISEÑO DEL GLOBO DE HISTORIETA */
         .bubble {
             position: absolute;
             top: -10px;
@@ -79,9 +77,9 @@
             display: flex;
             align-items: center;
             gap: 5px;
+            z-index: 10;
         }
 
-        /* Triangulito del globo */
         .bubble::after {
             content: '';
             position: absolute;
@@ -141,7 +139,6 @@
         .fecha { font-size: 1.5rem; font-weight: 300; margin-bottom: 5px; }
         .direccion { font-size: 0.9rem; line-height: 1.5; color: #666; margin-bottom: 10px; }
 
-        /* CARRUSEL ANIMADO */
         .footer-carousel { margin-top: 25px; overflow: hidden; width: 100%; white-space: nowrap; padding-bottom: 5px; }
         .carousel-track { display: inline-block; animation: scroll 15s linear infinite; }
         .carousel-track span { font-size: 1.8rem; margin: 0 15px; color: var(--verde-fondo); opacity: 0.3; }
@@ -196,7 +193,7 @@
     <div class="seccion" data-aos="fade-up" data-aos-duration="1000">
         <h3>✨ Confirmación</h3>
         <p class="direccion" style="margin-bottom: 15px;">Favor de confirmar antes del 10 de Julio</p>
-        <a href="https://wa.me/527227503243?text=Hola!+Confirmo+asistencia+al+bautizo+y+primer+cumpleaños+de+Carlos+Andre" class="btn btn-principal">Confirmar por WhatsApp</a>
+        <a href="https://wa.me/527227503243?text=Hola!+Confirmo+asistencia+al+bautizo+y+primer+cumpleaños+de+Carlos+Andre+👼🏻" class="btn btn-principal">Confirmar por WhatsApp</a>
     </div>
 
     <div class="footer-carousel">
