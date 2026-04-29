@@ -7,7 +7,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            /* Colores basados en tu imagen */
             --verde: #778b7b;
             --dorado: #cda86f;
             --crema: #fdfaf5;
@@ -21,9 +20,11 @@
             display: flex;
             justify-content: center;
             text-align: center;
+            min-height: 100vh;
         }
         .container {
             max-width: 500px;
+            width: 100%;
             padding: 40px 20px;
             background: white;
             box-shadow: 0 10px 30px rgba(0,0,0,0.05);
@@ -31,51 +32,41 @@
             border-radius: 15px;
             border: 1px solid rgba(205, 168, 111, 0.2);
         }
+        .photo-container { margin-bottom: 25px; margin-top: 10px; }
+        .photo-container img {
+            width: 180px; height: 180px;
+            border-radius: 50%; object-fit: cover;
+            border: 4px solid var(--dorado);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
         h1 {
             font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
-            color: var(--verde);
+            font-size: 2.5rem; color: var(--verde);
             margin-bottom: 10px;
         }
         .subtitulo {
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            font-size: 0.9rem;
-            margin-bottom: 30px;
-            color: var(--dorado);
-            font-weight: bold;
+            text-transform: uppercase; letter-spacing: 3px;
+            font-size: 0.9rem; margin-bottom: 20px;
+            color: var(--dorado); font-weight: bold;
         }
         .seccion {
-            margin: 40px 0;
-            border-top: 1px solid #eee;
+            margin: 40px 0; border-top: 1px solid #eee;
             padding-top: 25px;
         }
-        h3 {
-            font-family: 'Playfair Display', serif;
-            color: var(--verde);
-            margin-bottom: 10px;
-        }
+        h3 { font-family: 'Playfair Display', serif; color: var(--verde); }
         .btn {
-            display: inline-block;
-            padding: 12px 25px;
-            border: 1px solid var(--verde);
-            color: var(--verde);
-            text-decoration: none;
-            border-radius: 25px;
-            margin-top: 15px;
+            display: inline-block; padding: 12px 25px;
+            border: 1px solid var(--verde); color: var(--verde);
+            text-decoration: none; border-radius: 25px;
+            margin-top: 15px; font-weight: bold;
             transition: 0.3s;
-            font-weight: bold;
         }
-        .btn:hover {
-            background-color: var(--verde);
-            color: white;
-        }
+        .btn:hover { background-color: var(--verde); color: white; }
         .btn-principal {
-            background-color: var(--dorado);
-            border-color: var(--dorado);
+            background-color: var(--dorado); border-color: var(--dorado);
             color: white !important;
         }
-        .fecha { font-size: 1.6rem; font-weight: 300; margin-bottom: 5px; }
+        .fecha { font-size: 1.6rem; font-weight: 300; }
         .direccion { font-size: 0.95rem; line-height: 1.5; color: #666; }
     </style>
 </head>
@@ -83,8 +74,12 @@
 
 <div class="container">
     <p class="subtitulo">Nuestra gran alegría</p>
+    
+    <div class="photo-container">
+        <img src="foto-bebe.jpg" alt="Carlos André">
+    </div>
+
     <h1>El Bautizo de<br>Carlos André</h1>
-    <p>Te invitamos a celebrar con nosotros este día tan especial en el que Carlos recibirá el sacramento del bautismo.</p>
 
     <div class="seccion">
         <p class="fecha">Sábado, 25 de Julio</p>
@@ -94,20 +89,20 @@
     <div class="seccion">
         <h3>📍 La Ceremonia — 12:00 PM</h3>
         <p><strong>Parroquia de Nuestra Señora del Perpetuo Socorro</strong></p>
-        <p class="direccion">Altamirano 203, Col. Cuauhtémoc,<br>Toluca de Lerdo</p>
-        <a href="https://maps.app.goo.gl/r56XQcWAbmJtLp8E6" class="btn" target="_blank">Ver Ubicación</a>
+        <p class="direccion">Altamirano 203, Col. Cuauhtémoc, Toluca</p>
+        <a href="https://maps.app.goo.gl/JRkBw9Gq6WUACWHA9?g_st=aw" class="btn" target="_blank">Ver Ubicación</a>
     </div>
 
     <div class="seccion">
         <h3>🍽️ La Recepción — 3:00 PM</h3>
-        <p><strong>Jardín de Fiestas y Eventos "Las Rosas"</strong></p>
-        <p class="direccion">Calle Parque de Chapultepec 310,<br>Col. Parques Nacionales</p>
-        <a href="https://maps.app.goo.gl/3UfC6e8yG6F7eU8W8" class="btn" target="_blank">Ver Ubicación</a>
+        <p><strong>Jardín de Fiestas "Las Rosas"</strong></p>
+        <p class="direccion">Parque de Chapultepec 310, Col. Parques Nacionales</p>
+        <a href="https://maps.app.goo.gl/q8teHZ62qkRFy8KS7?g_st=aw" class="btn" target="_blank">Cómo Llegar</a>
     </div>
 
     <div class="seccion">
         <h3>✨ Confirmación</h3>
-        <p>Tu presencia hará este día más especial.</p>
+        <p class="direccion" style="margin-bottom: 15px;">Favor de confirmar antes del 10 de Julio</p>
         <a href="https://wa.me/527227503243?text=Hola!+Confirmo+asistencia+al+bautizo+de+Carlos+Andre" class="btn btn-principal">Confirmar por WhatsApp</a>
     </div>
 </div>
