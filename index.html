@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Invitación Bautizo Carlos André</title>
+    
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
     <style>
         :root {
             --verde: #778b7b;
@@ -21,6 +24,7 @@
             justify-content: center;
             text-align: center;
             min-height: 100vh;
+            overflow-x: hidden;
         }
         .container {
             max-width: 500px;
@@ -35,7 +39,11 @@
         .photo-container { margin-bottom: 25px; margin-top: 10px; }
         .photo-container img {
             width: 180px; height: 180px;
-            border-radius: 50%; object-fit: cover;
+            border-radius: 50%; 
+            object-fit: cover;
+            /* --- CAMBIO AQUÍ: BAJAMOS LA FOTO UN 20% --- */
+            object-position: center 20%; 
+            /* ------------------------------------------ */
             border: 4px solid var(--dorado);
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
@@ -73,39 +81,46 @@
 <body>
 
 <div class="container">
-    <p class="subtitulo">Nuestra gran alegría</p>
-    
-    <div class="photo-container">
-        <img src="foto-bebe.jpg" alt="Carlos André">
+    <div data-aos="fade-down" data-aos-duration="1000">
+        <p class="subtitulo">Nuestra gran alegría</p>
+        <div class="photo-container">
+            <img src="foto-bebe.jpg" alt="Carlos André">
+        </div>
+        <h1>El Bautizo de<br>Carlos André</h1>
     </div>
 
-    <h1>El Bautizo de<br>Carlos André</h1>
-
-    <div class="seccion">
+    <div class="seccion" data-aos="zoom-in" data-aos-duration="1200">
         <p class="fecha">Sábado, 25 de Julio</p>
         <p>Acompáñanos a celebrar la vida y la fe.</p>
     </div>
 
-    <div class="seccion">
+    <div class="seccion" data-aos="fade-right" data-aos-duration="1000">
         <h3>📍 La Ceremonia — 12:00 PM</h3>
         <p><strong>Parroquia de Nuestra Señora del Perpetuo Socorro</strong></p>
         <p class="direccion">Altamirano 203, Col. Cuauhtémoc, Toluca</p>
         <a href="https://maps.app.goo.gl/JRkBw9Gq6WUACWHA9?g_st=aw" class="btn" target="_blank">Ver Ubicación</a>
     </div>
 
-    <div class="seccion">
+    <div class="seccion" data-aos="fade-left" data-aos-duration="1000">
         <h3>🍽️ La Recepción — 3:00 PM</h3>
         <p><strong>Jardín de Fiestas "Las Rosas"</strong></p>
         <p class="direccion">Parque de Chapultepec 310, Col. Parques Nacionales</p>
         <a href="https://maps.app.goo.gl/q8teHZ62qkRFy8KS7?g_st=aw" class="btn" target="_blank">Cómo Llegar</a>
     </div>
 
-    <div class="seccion">
+    <div class="seccion" data-aos="fade-up" data-aos-duration="1000">
         <h3>✨ Confirmación</h3>
         <p class="direccion" style="margin-bottom: 15px;">Favor de confirmar antes del 10 de Julio</p>
         <a href="https://wa.me/527227503243?text=Hola!+Confirmo+asistencia+al+bautizo+de+Carlos+Andre" class="btn btn-principal">Confirmar por WhatsApp</a>
     </div>
 </div>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    once: true 
+  });
+</script>
 
 </body>
 </html>
